@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>LifePath Simulator – Decide tu mejor vida</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            lpPrimary: "#2563eb",
+            lpSecondary: "#0f172a",
+            lpAccent: "#22c55e",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-50">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 inset-x-0 z-30 bg-slate-950/80 backdrop-blur border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="#top" class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-lpPrimary to-lpAccent flex items-center justify-center text-xl font-black">
+          L
+        </div>
+        <div>
+          <p class="font-semibold tracking-tight">LifePath Simulator</p>
+          <p class="text-xs text-slate-400 -mt-1">Decide tu próximo paso</p>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="#personas" class="text-slate-300 hover:text-white transition">Para quién es</a>
+        <a href="#benefits" class="text-slate-300 hover:text-white transition">Beneficios</a>
+        <a href="#how-it-works" class="text-slate-300 hover:text-white transition">Cómo funciona</a>
+        <a href="#contact" class="px-4 py-2 rounded-full bg-lpPrimary hover:bg-blue-500 transition text-sm font-medium">
+          Quiero probarlo
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="pt-16">
+
+    <!-- HERO -->
+    <section class="relative overflow-hidden">
+      <!-- Fondo imagen + overlay -->
+      <div
+        class="absolute inset-0 -z-10 bg-cover bg-center"
+        style="background-image: url('https://img.freepik.com/foto-gratis/concepto-preocupacion-aumento-costo-vida_23-2151735425.jpg');"
+      ></div>
+      <div class="absolute inset-0 -z-10 bg-gradient-to-br from-slate-950/95 via-slate-950/85 to-slate-950/75"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Texto -->
+        <div>
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lpPrimary/20 border border-lpPrimary/40 text-xs font-medium text-blue-200">
+            IA para decisiones de vida más inteligentes
+          </span>
+
+          <h1 class="mt-6 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight">
+            Simula tus <span class="text-lpAccent">vidas alternativas</span>
+            antes de dar el próximo gran paso.
+          </h1>
+
+          <p class="mt-5 text-slate-300 text-sm sm:text-base leading-relaxed">
+            LifePath Simulator te ayuda a comparar escenarios como
+            <span class="font-semibold text-slate-100">comprar vs alquilar</span>,
+            <span class="font-semibold text-slate-100">mudarte de ciudad</span> o
+            <span class="font-semibold text-slate-100">aprovechar el teletrabajo</span>,
+            usando datos reales de coste de vida en España. Menos miedo a equivocarte, más claridad para tu familia.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <a href="#contact"
+               class="inline-flex justify-center items-center px-6 py-3 rounded-full bg-lpPrimary hover:bg-blue-500 text-sm sm:text-base font-medium shadow-lg shadow-blue-500/30 transition">
+              Solicitar acceso a la beta
+            </a>
+            <a href="#how-it-works"
+               class="inline-flex justify-center items-center px-6 py-3 rounded-full border border-slate-600 hover:border-slate-400 text-sm sm:text-base text-slate-200 transition">
+              Ver cómo funciona
+            </a>
+          </div>
+
+          <p class="mt-4 text-xs text-slate-400">
+            Diseñado para familias, jóvenes profesionales y expatriados que buscan vivir mejor sin ahogarse con los costes.
+          </p>
+        </div>
+
+        <!-- Panel visual / mockup -->
+        <div class="relative">
+          <div class="absolute -top-10 -right-6 w-40 h-40 bg-lpAccent/20 blur-3xl rounded-full"></div>
+          <div class="absolute -bottom-6 -left-10 w-44 h-44 bg-lpPrimary/30 blur-3xl rounded-full"></div>
+
+          <div class="relative rounded-3xl bg-slate-900/80 border border-slate-700/80 shadow-2xl shadow-black/60 p-5 sm:p-7 backdrop-blur">
+            <p class="text-xs uppercase text-slate-400 font-semibold tracking-[0.2em] mb-4">
+              Vista previa del simulador
+            </p>
+
+            <div class="grid gap-4">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-xs text-slate-400">Escenario recomendado</p>
+                  <p class="text-lg font-semibold text-slate-50">Mudarse a Valencia con teletrabajo parcial</p>
+                </div>
+                <span class="inline-flex items-center text-xs px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/40">
+                  +320€ / mes
+                </span>
+              </div>
+
+              <div class="grid grid-cols-3 gap-3 text-xs">
+                <div class="rounded-xl bg-slate-900 border border-slate-700 p-3">
+                  <p class="text-slate-400">Ahorro mensual</p>
+                  <p class="mt-2 text-base font-semibold text-emerald-300">+320€</p>
+                </div>
+                <div class="rounded-xl bg-slate-900 border border-orange-500/40 p-3">
+                  <p class="text-slate-400">Riesgo deuda</p>
+                  <p class="mt-2 text-base font-semibold text-orange-300">Bajo</p>
+                </div>
+                <div class="rounded-xl bg-slate-900 border border-slate-700 p-3">
+                  <p class="text-slate-400">Tiempo libre</p>
+                  <p class="mt-2 text-base font-semibold text-sky-300">+4h/sem</p>
+                </div>
+              </div>
+
+              <div class="mt-2 text-[11px] text-slate-400">
+                Comparando tus escenarios: seguir en Madrid compartiendo piso, comprar en periferia y mudarte a Valencia con teletrabajo. Datos basados en coste de vida, alquiler, salarios y transporte reales.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERSONAS / PARA QUIÉN ES -->
+    <section id="personas" class="py-14 lg:py-20 bg-slate-900/60 border-y border-slate-800">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight mb-2">
+              Diseñado para personas reales con decisiones difíciles
+            </h2>
+            <p class="text-sm sm:text-base text-slate-300 max-w-2xl">
+              LifePath Simulator nace de escuchar a cientos de personas que sienten que
+              <span class="font-medium">la vivienda, la inflación y los sueldos no cuadran</span>. Estos son algunos perfiles que se benefician directamente.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Persona 1 -->
+          <article class="bg-slate-900/70 border border-slate-800 rounded-2xl overflow-hidden shadow-lg shadow-black/40 flex flex-col">
+            <img
+              src="https://img.freepik.com/foto-gratis/presentacion-personas-diferentes-personalidades_23-2151112881.jpg"
+              alt="Personas diferentes"
+              class="h-40 w-full object-cover"
+            />
+            <div class="p-5 flex flex-col gap-2">
+              <h3 class="text-base font-semibold">Familias que no llegan a fin de mes</h3>
+              <p class="text-xs text-slate-300">
+                Parejas con hipoteca o alquiler alto que quieren saber si mudarse de barrio, ciudad o país realmente les aliviaría el mes.
+              </p>
+              <p class="text-[11px] text-slate-400 mt-1">
+                Buscan: claridad, margen económico, más tiempo para la familia.
+              </p>
+            </div>
+          </article>
+
+          <!-- Persona 2 -->
+          <article class="bg-slate-900/70 border border-slate-800 rounded-2xl overflow-hidden shadow-lg shadow-black/40 flex flex-col">
+            <img
+              src="https://img.freepik.com/foto-gratis/hombre-parada-autobus-esperando-transporte_23-2152025166.jpg"
+              alt="Joven esperando autobús"
+              class="h-40 w-full object-cover"
+            />
+            <div class="p-5 flex flex-col gap-2">
+              <h3 class="text-base font-semibold">Jóvenes profesionales y expatriados</h3>
+              <p class="text-xs text-slate-300">
+                Personas que dudan entre seguir en una gran ciudad cara, aprovechar el teletrabajo o mudarse a otra zona de España o Europa.
+              </p>
+              <p class="text-[11px] text-slate-400 mt-1">
+                Buscan: decisiones de vida con menos miedo a equivocarse.
+              </p>
+            </div>
+          </article>
+
+          <!-- Persona 3 -->
+          <article class="bg-slate-900/70 border border-slate-800 rounded-2xl overflow-hidden shadow-lg shadow-black/40 flex flex-col">
+            <img
+              src="https://img.freepik.com/foto-gratis/hombre-caja-carton-calle_23-2151191473.jpg"
+              alt="Hombre preocupado en la calle"
+              class="h-40 w-full object-cover"
+            />
+            <div class="p-5 flex flex-col gap-2">
+              <h3 class="text-base font-semibold">Clases medias atrapadas por la vivienda</h3>
+              <p class="text-xs text-slate-300">
+                Personas que sienten que la vivienda es una trampa: comprar parece imposible, alquilar es inasumible y mudarse da vértigo.
+              </p>
+              <p class="text-[11px] text-slate-400 mt-1">
+                Buscan: saber qué escenario es realmente sostenible.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section id="benefits" class="py-14 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight mb-3">
+            ¿Qué hace diferente a LifePath Simulator?
+          </h2>
+          <p class="text-sm sm:text-base text-slate-300">
+            No es otra calculadora de hipotecas. Es un simulador de vidas alternativas que
+            <span class="font-medium">traduce datos complejos en decisiones sencillas</span>.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5">
+            <h3 class="text-base font-semibold mb-2">Escenarios completos, no sólo números</h3>
+            <p class="text-xs text-slate-300">
+              Compara vivir en distintas ciudades, tipos de vivienda, niveles de teletrabajo y estilos de vida, no sólo cuotas mensuales.
+            </p>
+          </div>
+          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5">
+            <h3 class="text-base font-semibold mb-2">Basado en datos reales de España</h3>
+            <p class="text-xs text-slate-300">
+              Usa datos de coste de vida, alquiler, salarios, transporte e inflación para generar simulaciones realistas.
+            </p>
+          </div>
+          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5">
+            <h3 class="text-base font-semibold mb-2">Lenguaje claro, estilo semáforo</h3>
+            <p class="text-xs text-slate-300">
+              Olvídate de tablas imposibles: ves rápidamente qué escenario es más sano para tu bolsillo y tu tiempo libre.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section id="how-it-works" class="py-14 lg:py-20 bg-slate-900/70 border-y border-slate-800">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-center">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight mb-3">
+              Cómo funcionaría el primer prototipo
+            </h2>
+            <p class="text-sm sm:text-base text-slate-300 mb-6">
+              El objetivo del MVP es simple: ayudarte a comparar 2–3 posibles vidas
+              (seguir como estás, mudarte, comprar, alquilar) y mostrarte cuál tiene mejor equilibrio entre dinero y tiempo.
+            </p>
+
+            <ol class="space-y-4 text-sm text-slate-200">
+              <li class="flex gap-3">
+                <span class="w-6 h-6 flex items-center justify-center rounded-full bg-lpPrimary text-xs font-semibold mt-0.5">1</span>
+                <div>
+                  <p class="font-semibold">Cuéntanos tu punto de partida.</p>
+                  <p class="text-xs text-slate-300">
+                    Ciudad actual, ingresos netos, situación de vivienda (alquiler, piso compartido, con familia…) y si tienes o podrías tener teletrabajo.
+                  </p>
+                </div>
+              </li>
+              <li class="flex gap-3">
+                <span class="w-6 h-6 flex items-center justify-center rounded-full bg-lpPrimary text-xs font-semibold mt-0.5">2</span>
+                <div>
+                  <p class="font-semibold">Elige los escenarios a comparar.</p>
+                  <p class="text-xs text-slate-300">
+                    Por ejemplo: seguir en la ciudad actual, mudarte a otra ciudad más barata o comprar en la periferia dentro de 1–2 años.
+                  </p>
+                </div>
+              </li>
+              <li class="flex gap-3">
+                <span class="w-6 h-6 flex items-center justify-center rounded-full bg-lpPrimary text-xs font-semibold mt-0.5">3</span>
+                <div>
+                  <p class="font-semibold">Conectamos con datos reales.</p>
+                  <p class="text-xs text-slate-300">
+                    Coste de alquiler/compra, transporte, energía, cesta de la compra, salarios medios, inflación… Todo aplicado a tu caso.
+                  </p>
+                </div>
+              </li>
+              <li class="flex gap-3">
+                <span class="w-6 h-6 flex items-center justify-center rounded-full bg-lpPrimary text-xs font-semibold mt-0.5">4</span>
+                <div>
+                  <p class="font-semibold">Te mostramos el resultado en lenguaje humano.</p>
+                  <p class="text-xs text-slate-300">
+                    Ahorro mensual estimado, riesgo de endeudamiento y tiempo libre por escenario. Colores tipo semáforo y recomendaciones claras.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Imagen decorativa -->
+          <div class="relative">
+            <div class="absolute -top-6 -left-4 w-32 h-32 rounded-full bg-lpPrimary/30 blur-3xl"></div>
+            <div class="absolute -bottom-8 -right-6 w-36 h-36 rounded-full bg-lpAccent/40 blur-3xl"></div>
+
+            <div class="relative rounded-3xl overflow-hidden border border-slate-700 shadow-xl shadow-black/60">
+              <img
+                src="https://img.freepik.com/foto-gratis/retrato-estilo-arte-digital-mujer-adulta_23-2151122434.jpg"
+                alt="Persona pensando en su futuro"
+                class="w-full h-64 object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <p class="text-xs uppercase tracking-[0.2em] text-slate-300 mb-1">Idea LifePath Simulator</p>
+                <p class="text-sm text-slate-100">
+                  Menos decisiones a ciegas. Más claridad para decidir dónde y cómo quieres vivir.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contact" class="py-14 lg:py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight mb-3">
+            ¿Te gustaría probar LifePath Simulator?
+          </h2>
+          <p class="text-sm sm:text-base text-slate-300">
+            Déjanos tus datos y cuéntanos brevemente tu situación. Usaremos esta información para priorizar el desarrollo del prototipo y contactar contigo si encajas en el perfil de prueba.
+          </p>
+        </div>
+
+        <!-- Formulario usando mailto en lugar de endpoint -->
+        <form
+          action="mailto:toniathink@gmail.com"
+          method="POST"
+          enctype="text/plain"
+          class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl shadow-black/60 space-y-5"
+        >
+          <!-- Email de contacto visible para el usuario -->
+          <p class="text-xs text-slate-400 mb-2">
+            También puedes escribirnos directamente a:
+            <a href="mailto:toniathink@gmail.com" class="text-blue-400 hover:text-blue-300 underline">
+              toniathink@gmail.com
+            </a>
+            <br />
+            Al enviar este formulario se abrirá tu gestor de correo con los datos rellenados.
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="nombre" class="block text-xs font-medium text-slate-300 mb-1">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                name="Nombre"
+                required
+                class="w-full rounded-xl bg-slate-950 border border-slate-700 focus:border-lpPrimary focus:ring-1 focus:ring-lpPrimary text-sm px-3 py-2 outline-none"
+                placeholder="Tu nombre"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="block text-xs font-medium text-slate-300 mb-1">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="Email"
+                required
+                class="w-full rounded-xl bg-slate-950 border border-slate-700 focus:border-lpPrimary focus:ring-1 focus:ring-lpPrimary text-sm px-3 py-2 outline-none"
+                placeholder="tucorreo@ejemplo.com"
+              />
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="persona" class="block text-xs font-medium text-slate-300 mb-1">¿Con cuál perfil te identificas más?</label>
+              <select
+                id="persona"
+                name="Perfil"
+                required
+                class="w-full rounded-xl bg-slate-950 border border-slate-700 focus:border-lpPrimary focus:ring-1 focus:ring-lpPrimary text-sm px-3 py-2 outline-none"
+              >
+                <option value="">Selecciona una opción</option>
+                <option value="Familia trabajadora ahogada mes a mes">Familia trabajadora ahogada mes a mes</option>
+                <option value="Joven profesional / expatriado">Joven profesional / expatriado</option>
+                <option value="Clase media frustrada con la vivienda">Clase media frustrada con la vivienda</option>
+                <option value="Perfil analítico / interesado en datos macro">Perfil analítico / interesado en datos macro</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="ciudad" class="block text-xs font-medium text-slate-300 mb-1">Ciudad actual</label>
+              <input
+                type="text"
+                id="ciudad"
+                name="Ciudad actual"
+                class="w-full rounded-xl bg-slate-950 border border-slate-700 focus:border-lpPrimary focus:ring-1 focus:ring-lpPrimary text-sm px-3 py-2 outline-none"
+                placeholder="Ej: Madrid, Barcelona, Valencia..."
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="situacion" class="block text-xs font-medium text-slate-300 mb-1">
+              Describe brevemente tu situación actual (alquiler, hipoteca, compartir piso, mudanza, expatriación...)
+            </label>
+            <textarea
+              id="situacion"
+              name="Situación actual"
+              rows="4"
+              required
+              class="w-full rounded-xl bg-slate-950 border border-slate-700 focus:border-lpPrimary focus:ring-1 focus:ring-lpPrimary text-sm px-3 py-2 outline-none resize-none"
+              placeholder="Cuéntanos en 4-6 líneas qué dudas tienes sobre dónde y cómo vivir."
+            ></textarea>
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-slate-300 mb-1">Nivel de urgencia</label>
+            <div class="flex flex-wrap gap-3 text-xs">
+              <label class="inline-flex items-center gap-2">
+                <input type="radio" name="Urgencia" value="Solo explorando posibilidades" class="rounded border-slate-600 text-lpPrimary focus:ring-lpPrimary" checked />
+                <span>Solo explorando posibilidades</span>
+              </label>
+              <label class="inline-flex items-center gap-2">
+                <input type="radio" name="Urgencia" value="Quiero decidir en los próximos 6 meses" class="rounded border-slate-600 text-lpPrimary focus:ring-lpPrimary" />
+                <span>Quiero decidir en los próximos 6 meses</span>
+              </label>
+              <label class="inline-flex items-center gap-2">
+                <input type="radio" name="Urgencia" value="Necesito tomar una decisión en menos de 3 meses" class="rounded border-slate-600 text-lpPrimary focus:ring-lpPrimary" />
+                <span>Necesito tomar una decisión en menos de 3 meses</span>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label for="contacto_preferido" class="block text-xs font-medium text-slate-300 mb-1">¿Cómo prefieres que te contactemos?</label>
+            <select
+              id="contacto_preferido"
+              name="Contacto preferido"
+              class="w-full rounded-xl bg-slate-950 border border-slate-700 focus:border-lpPrimary focus:ring-1 focus:ring-lpPrimary text-sm px-3 py-2 outline-none"
+            >
+              <option value="Email" selected>Email</option>
+              <option value="Videollamada (previa coordinación por email)">Videollamada (previa coordinación por email)</option>
+              <option value="Solo quiero dejar mis datos por ahora">Solo quiero dejar mis datos por ahora</option>
+            </select>
+          </div>
+
+          <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <button
+              type="submit"
+              class="inline-flex justify-center items-center px-6 py-3 rounded-full bg-lpAccent hover:bg-emerald-500 text-slate-950 font-semibold text-sm sm:text-base transition shadow-lg shadow-emerald-500/40"
+            >
+              Enviar mi interés
+            </button>
+            <p class="text-[11px] text-slate-400">
+              Este formulario abrirá tu correo con los datos rellenados para que puedas revisarlos y enviarlos. Tus datos se usarán solo para este proyecto piloto.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 bg-slate-950/90">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-xs text-slate-500">
+        © <span id="year"></span> LifePath Simulator. Proyecto AI T.H.I.N.K. — Explorando nuevas formas de decidir cómo y dónde vivir.
+      </p>
+      <p class="text-xs text-slate-500">
+        Contacto: <a href="mailto:toniathink@gmail.com" class="text-blue-400 hover:text-blue-300">toniathink@gmail.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Actualiza el año del footer automáticamente
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
