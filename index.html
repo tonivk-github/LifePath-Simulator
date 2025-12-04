@@ -527,202 +527,204 @@
             Sustituye el valor de "action" por el ENDPOINT REAL
             que vayas a usar para procesar el formulario.
           -->
-          <form action="mailto:toniathink@gmail.com" method="POST" enctype="text/plain" class="space-y-6 text-sm">
-            <!-- Datos básicos -->
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label for="nombre" class="block mb-1 text-slate-200">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" required
-                  class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                  placeholder="Tu nombre" />
-              </div>
-              <div>
-                <label for="email" class="block mb-1 text-slate-200">Email</label>
-                <input type="email" id="email" name="email" required
-                  class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                  placeholder="tucorreo@ejemplo.com" />
-              </div>
-            </div>
+          <form action="https://formspree.io/f/movgwozr" method="POST" class="space-y-6 text-sm">
 
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label for="ciudad" class="block mb-1 text-slate-200">Ciudad donde vives</label>
-                <input type="text" id="ciudad" name="ciudad"
-                  class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                  placeholder="Madrid, Valencia, Sevilla..." />
-              </div>
-              <div>
-                <label for="perfil" class="block mb-1 text-slate-200">Perfil</label>
-                <select id="perfil" name="perfil"
-                  class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                  required>
-                  <option value="">Selecciona una opción</option>
-                  <option value="profesional-joven">Profesional joven</option>
-                  <option value="pareja-familia">Pareja / familia con hijos</option>
-                  <option value="single-alquiler">Persona sola en alquiler</option>
-                  <option value="creador-contenido">Creador/a de contenido</option>
-                  <option value="otro">Otro</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Situación económica y de vivienda -->
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label for="situacion" class="block mb-1 text-slate-200">Situación de vivienda actual</label>
-                <select id="situacion" name="situacion"
-                  class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
-                  <option value="">Selecciona una opción</option>
-                  <option value="alquiler-compartido">Alquiler compartido</option>
-                  <option value="alquiler-solo">Alquiler viviendo solo/a</option>
-                  <option value="hipoteca">Hipoteca</option>
-                  <option value="con-padres">Viviendo con padres/familia</option>
-                  <option value="otro">Otro</option>
-                </select>
-              </div>
-              <div>
-                <label for="ingresos" class="block mb-1 text-slate-200">
-                  Ingresos mensuales netos aprox. (€)
-                </label>
-                <input type="number" id="ingresos" name="ingresos" min="0" step="50"
-                  class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                  placeholder="Ej: 1800" />
-              </div>
-            </div>
-
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label for="convives" class="block mb-1 text-slate-200">¿Con quién vives actualmente?</label>
-                <select id="convives" name="convives"
-                  class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
-                  <option value="">Selecciona una opción</option>
-                  <option value="solo">Solo/a</option>
-                  <option value="pareja">Con pareja</option>
-                  <option value="pareja-hijos">Con pareja e hijos</option>
-                  <option value="companeros">Con compañeros/amigos</option>
-                  <option value="familia-origen">Con familia de origen</option>
-                </select>
-              </div>
-              <div>
-                <label for="teletrabajo" class="block mb-1 text-slate-200">¿Puedes teletrabajar?</label>
-                <select id="teletrabajo" name="teletrabajo"
-                  class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
-                  <option value="">Selecciona una opción</option>
-                  <option value="no">No</option>
-                  <option value="si-parcial">Sí, algunos días</option>
-                  <option value="si-total">Sí, 100% remoto</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Escenarios y prioridades -->
+            <!-- Nombre -->
             <div>
-              <p class="block mb-1 text-slate-200">¿Qué escenarios te estás planteando? <span
-                  class="text-slate-400 text-xs">(puedes marcar varios)</span></p>
-              <div class="grid sm:grid-cols-2 gap-2 mt-1 text-slate-300">
-                <label class="flex items-start gap-2">
-                  <input type="checkbox" name="escenarios[]" value="seguir-igual"
-                    class="mt-1 rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500" />
-                  <span>Seguir donde estoy</span>
+              <label for="nombre" class="block mb-1 text-slate-200">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" required
+                class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                placeholder="Tu nombre" />
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label for="email" class="block mb-1 text-slate-200">Email</label>
+              <input type="email" id="email" name="email" required
+                class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                placeholder="tucorreo@ejemplo.com" />
+            </div>
+
+            <!-- Ciudad actual -->
+            <div>
+              <label for="ciudad_actual" class="block mb-1 text-slate-200">Ciudad donde vives actualmente</label>
+              <input type="text" id="ciudad_actual" name="ciudad_actual" required
+                class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                placeholder="Madrid, Valencia, Sevilla..." />
+            </div>
+
+            <!-- Ingresos mensuales -->
+            <div>
+              <label for="ingresos" class="block mb-1 text-slate-200">Ingresos mensuales netos aproximados</label>
+              <input type="number" id="ingresos" name="ingresos" required
+                class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                placeholder="Ej. 1600" />
+            </div>
+
+            <!-- Situación de vivienda actual -->
+            <div>
+              <label for="situacion_vivienda" class="block mb-1 text-slate-200">Situación de vivienda actual</label>
+              <select id="situacion_vivienda" name="situacion_vivienda"
+                class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                required>
+                <option value="">Selecciona una opción</option>
+                <option value="alquiler-compartido">Alquiler compartido</option>
+                <option value="alquiler-solo">Alquiler viviendo solo/a</option>
+                <option value="hipoteca">Hipoteca</option>
+                <option value="con-padres">Viviendo con padres/familia</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <!-- Con quién vive -->
+            <div>
+              <label for="convivencia" class="block mb-1 text-slate-200">¿Con quién vives actualmente?</label>
+              <select id="convivencia" name="convivencia"
+                class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                required>
+                <option value="">Selecciona una opción</option>
+                <option value="solo">Solo/a</option>
+                <option value="pareja">Con pareja</option>
+                <option value="pareja-hijos">Pareja + hijos</option>
+                <option value="amigos">Con amigos/compañeros</option>
+                <option value="familia-origen">Con familia de origen</option>
+              </select>
+            </div>
+
+            <!-- Escenarios que se plantea -->
+            <div>
+              <label class="block mb-1 text-slate-200">Escenarios que estás considerando (puedes elegir varios)</label>
+              <div class="space-y-2 text-slate-300">
+
+                <label class="flex items-center gap-2">
+                  <input type="checkbox" name="escenarios[]" value="quedarme"
+                    class="rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500">
+                  Quedarme donde estoy
                 </label>
-                <label class="flex items-start gap-2">
-                  <input type="checkbox" name="escenarios[]" value="mudanza-misma-ciudad"
-                    class="mt-1 rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500" />
-                  <span>Mudanza dentro de la misma ciudad</span>
+
+                <label class="flex items-center gap-2">
+                  <input type="checkbox" name="escenarios[]" value="mudanza-ciudad"
+                    class="rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500">
+                  Mudanza dentro de la ciudad
                 </label>
-                <label class="flex items-start gap-2">
+
+                <label class="flex items-center gap-2">
                   <input type="checkbox" name="escenarios[]" value="mudanza-otra-ciudad"
-                    class="mt-1 rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500" />
-                  <span>Mudanza a otra ciudad</span>
+                    class="rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500">
+                  Mudanza a otra ciudad
                 </label>
-                <label class="flex items-start gap-2">
-                  <input type="checkbox" name="escenarios[]" value="comprar-vivienda"
-                    class="mt-1 rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500" />
-                  <span>Comprar vivienda</span>
+
+                <label class="flex items-center gap-2">
+                  <input type="checkbox" name="escenarios[]" value="comprar"
+                    class="rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500">
+                  Comprar vivienda
                 </label>
-                <label class="flex items-start gap-2">
-                  <input type="checkbox" name="escenarios[]" value="compartir-piso"
-                    class="mt-1 rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500" />
-                  <span>Compartir piso</span>
+
+                <label class="flex items-center gap-2">
+                  <input type="checkbox" name="escenarios[]" value="compartir"
+                    class="rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500">
+                  Compartir piso
                 </label>
-                <label class="flex items-start gap-2">
-                  <input type="checkbox" name="escenarios[]" value="volver-familia"
-                    class="mt-1 rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500" />
-                  <span>Vivir temporalmente con familia</span>
+
+                <label class="flex items-center gap-2">
+                  <input type="checkbox" name="escenarios[]" value="vivir-familia"
+                    class="rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500">
+                  Vivir temporalmente con familia
                 </label>
-                <label class="flex items-start gap-2 sm:col-span-2">
+
+                <label class="flex items-center gap-2">
                   <input type="checkbox" name="escenarios[]" value="otro"
-                    class="mt-1 rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500" />
-                  <span>Otro escenario (explícalo en el mensaje de abajo)</span>
+                    class="rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500">
+                  Otro
                 </label>
+
               </div>
             </div>
 
+            <!-- Prioridades (elige máximo 2) -->
             <div>
-              <p class="block mb-1 text-slate-200">Tus prioridades ahora mismo <span
-                  class="text-slate-400 text-xs">(marca 1 o 2)</span></p>
-              <div class="grid sm:grid-cols-2 gap-2 mt-1 text-slate-300">
-                <label class="flex items-start gap-2">
-                  <input type="checkbox" name="prioridades[]" value="ahorrar-mas"
-                    class="mt-1 rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500" />
-                  <span>Ahorrar más dinero</span>
+              <label class="block mb-1 text-slate-200">¿Qué es más importante para ti ahora mismo? (elige máximo
+                2)</label>
+
+              <div class="space-y-2 text-slate-300">
+
+                <label class="flex items-center gap-2">
+                  <input type="checkbox" name="prioridades[]" value="ahorrar"
+                    class="rounded border-slate-700 bg-slate-950 text-emerald-500"> Ahorrar más dinero
                 </label>
-                <label class="flex items-start gap-2">
-                  <input type="checkbox" name="prioridades[]" value="reducir-commuting"
-                    class="mt-1 rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500" />
-                  <span>Reducir tiempo de desplazamientos</span>
+
+                <label class="flex items-center gap-2">
+                  <input type="checkbox" name="prioridades[]" value="tiempo"
+                    class="rounded border-slate-700 bg-slate-950 text-emerald-500"> Ganar tiempo libre / menos
+                  desplazamientos
                 </label>
-                <label class="flex items-start gap-2">
-                  <input type="checkbox" name="prioridades[]" value="tiempo-libre"
-                    class="mt-1 rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500" />
-                  <span>Ganar tiempo libre / descanso</span>
+
+                <label class="flex items-center gap-2">
+                  <input type="checkbox" name="prioridades[]" value="estabilidad"
+                    class="rounded border-slate-700 bg-slate-950 text-emerald-500"> Estabilidad familiar
                 </label>
-                <label class="flex items-start gap-2">
-                  <input type="checkbox" name="prioridades[]" value="estabilidad-familiar"
-                    class="mt-1 rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500" />
-                  <span>Estabilidad familiar</span>
+
+                <label class="flex items-center gap-2">
+                  <input type="checkbox" name="prioridades[]" value="comprar"
+                    class="rounded border-slate-700 bg-slate-950 text-emerald-500"> Comprar vivienda pronto
                 </label>
-                <label class="flex items-start gap-2">
-                  <input type="checkbox" name="prioridades[]" value="comprar-casa"
-                    class="mt-1 rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500" />
-                  <span>Comprar vivienda a medio plazo</span>
+
+                <label class="flex items-center gap-2">
+                  <input type="checkbox" name="prioridades[]" value="calidad-vida"
+                    class="rounded border-slate-700 bg-slate-950 text-emerald-500"> Mejorar calidad de vida
                 </label>
-                <label class="flex items-start gap-2">
-                  <input type="checkbox" name="prioridades[]" value="reducir-estres"
-                    class="mt-1 rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500" />
-                  <span>Reducir estrés financiero</span>
-                </label>
+
               </div>
             </div>
 
-            <!-- Pregunta abierta -->
+            <!-- Teletrabajo -->
             <div>
-              <label for="mensaje" class="block mb-1 text-slate-200">¿Qué te preocupa más ahora mismo?</label>
+              <label for="teletrabajo" class="block mb-1 text-slate-200">¿Puedes teletrabajar?</label>
+              <select id="teletrabajo" name="teletrabajo"
+                class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                required>
+                <option value="">Selecciona una opción</option>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+                <option value="parcial">Parcial (algunos días)</option>
+              </select>
+            </div>
+
+            <!-- Mensaje -->
+            <div>
+              <label for="mensaje" class="block mb-1 text-slate-200">
+                ¿Qué te preocupa más ahora mismo? (opcional)
+              </label>
               <textarea id="mensaje" name="mensaje" rows="4"
                 class="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-700 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                placeholder="Cuéntanos tu situación: vivienda, trabajo, familia, dudas sobre el futuro..."></textarea>
+                placeholder="Cuéntame tu caso para adaptar mejor la simulación…"></textarea>
             </div>
 
-            <!-- Consentimiento -->
+            <!-- Notas y privacidad -->
+            <p class="text-xs text-slate-400">
+              *El tiempo de desplazamientos se estima usando promedios reales por ciudad. Si deseas más precisión,
+              indícalo en el mensaje.
+            </p>
+
             <div class="flex items-start gap-2">
               <input type="checkbox" id="acepto" name="acepto" required
                 class="mt-1 rounded border-slate-700 bg-slate-950 text-emerald-500 focus:ring-emerald-500" />
               <label for="acepto" class="text-xs text-slate-300">
-                Acepto que me contactéis por email para hablar de LifePath Simulator y entiendo que podré solicitar la
-                eliminación de mis datos cuando quiera.
+                Acepto que me contactéis para enviarme mi simulación preliminar. Puedo pedir la eliminación de mis datos
+                en cualquier momento.
               </label>
             </div>
-            <p class="text-xs text-slate-400 mt-2">
-              *El tiempo de desplazamientos se estima según la media habitual de tu ciudad. Puedes indicar tu tiempo
-              real en el mensaje si deseas más precisión.*
-            </p>
 
-            <div>
-              <button type="submit"
-                class="w-full inline-flex items-center justify-center px-4 py-2.5 rounded-full bg-emerald-500 text-slate-900 font-semibold text-sm hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/30">
-                Recibir simulación
-              </button>
-            </div>
+            <!-- Opcionales ocultos -->
+            <input type="hidden" name="_subject" value="Nueva solicitud LifePath Simulator">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+
+            <!-- Botón -->
+            <button type="submit"
+              class="w-full inline-flex items-center justify-center px-4 py-2.5 rounded-full bg-emerald-500 text-slate-900 font-semibold text-sm hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/30">
+              Enviar solicitud
+            </button>
           </form>
         </div>
       </div>
